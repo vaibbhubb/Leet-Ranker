@@ -1,0 +1,1 @@
+/*Enter your query here.*/SELECT Name FROM STUDENTSWHERE Marks>75ORDER BY RIGHT(Name,3) ASC, ID ASC
