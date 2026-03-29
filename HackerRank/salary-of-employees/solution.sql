@@ -1,0 +1,1 @@
+/*Enter your query here.*/SELECT Employee.name FROM EmployeeWHERE Employee.Salary > 2000 AND Employee.months < 10 ORDER BY Employee.employee_id ASC
