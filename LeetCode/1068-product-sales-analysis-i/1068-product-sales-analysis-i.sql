@@ -1,0 +1,1 @@
+# Write your MySQL query statement belowSELECT     p.product_name,     s.year,     s.priceFROM     Sales sJOIN     Product p ON s.product_id = p.product_id;
