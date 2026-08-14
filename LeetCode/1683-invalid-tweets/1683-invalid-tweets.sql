@@ -1,0 +1,1 @@
+# Write your MySQL query statement belowSELECT tweet_id FROM Tweets AS t WHERE LENGTH(t.content) > 15
