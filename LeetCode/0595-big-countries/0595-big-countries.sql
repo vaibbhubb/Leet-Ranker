@@ -1,0 +1,1 @@
+# Write your MySQL query statement belowSELECT name, population, areaFROM World AS wWHERE w.area >= 3000000 OR w.population >= 25000000
