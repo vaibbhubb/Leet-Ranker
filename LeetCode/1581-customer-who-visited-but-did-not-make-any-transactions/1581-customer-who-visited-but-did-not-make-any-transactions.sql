@@ -1,0 +1,1 @@
+SELECT    customer_id,    COUNT(Visits.visit_id) AS count_no_transFROM Visits LEFT JOIN Transactions    ON Visits.visit_id = Transactions.visit_idWHERE Transactions.visit_id IS NULLGROUP BY customer_id
