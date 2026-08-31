@@ -1,0 +1,6 @@
+/*
+Enter your query here.
+*/
+SELECT 
+    CEIL(AVG(SALARY) - AVG(CAST(REPLACE (Salary, '0', '')AS UNSIGNED)))
+FROM EMPLOYEES
