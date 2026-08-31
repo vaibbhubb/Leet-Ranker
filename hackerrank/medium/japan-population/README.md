@@ -1,4 +1,4 @@
-# Average Population
+# Japan Population
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -19,12 +19,13 @@ The **CITY** table is described as follows:
 **Language:** SQL  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-31T08:42:03.536Z  
+**Submitted:** 2026-08-31T08:43:43.061Z  
 
 ```sql
 SELECT
-    ROUND(AVG(POPULATION))
+    SUM(POPULATION)
 FROM CITY
+WHERE COUNTRYCODE = 'JPN'
 
 ```
 
