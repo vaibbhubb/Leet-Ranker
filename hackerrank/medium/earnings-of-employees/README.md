@@ -1,4 +1,4 @@
-# The Blunder
+# Top Earners
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -25,15 +25,13 @@ where _employee\_id_ is an employee's ID number, _name_ is their name, _months_ 
 **Language:** SQL  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-31T09:05:59.332Z  
+**Submitted:** 2026-08-31T09:36:21.785Z  
 
 ```sql
 /*
 Enter your query here.
 */
-SELECT 
-    CEIL(AVG(SALARY) - AVG(CAST(REPLACE (Salary, '0', '')AS UNSIGNED)))
-FROM EMPLOYEES
+SELECT MAX(e.months*e.salary), COUNT(*) FROM employee e WHERE e.months*e.salary = (SELECT MAX(e.months*e.salary) FROM employee e)
 
 ```
 
