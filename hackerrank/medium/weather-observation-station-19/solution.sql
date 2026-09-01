@@ -1,13 +1,13 @@
 /*
 Enter your query here.
 */
-SELECT 
-ROUND(ABS(c-a) + ABS(d-b), 4)
-
-FROM(SELECT
-        MIN(LAT_N) AS a,
-        MIN(LONG_W) AS b,
-        MAX(LAT_N) AS c,
-        MAX(LONG_W) AS d
+SELECT
+ROUND(SQRT(((b-a) * (b-a)) + ((d-c) * (d-c))), 4)
+FROM (
+        SELECT
+            MIN(LAT_N) AS a,
+            MIN(LONG_W) AS c,
+            MAX(LAT_N) AS b ,
+            MAX(LONG_W) AS d
         FROM STATION
-) AS T
+      ) AS t
