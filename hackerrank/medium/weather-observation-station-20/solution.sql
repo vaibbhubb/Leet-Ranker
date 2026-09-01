@@ -1,13 +1,12 @@
 /*
 Enter your query here.
 */
-SELECT
-ROUND(SQRT(((b-a) * (b-a)) + ((d-c) * (d-c))), 4)
+SELECT ROUND(AVG(LAT_N), 4)
 FROM (
-        SELECT
-            MIN(LAT_N) AS a,
-            MIN(LONG_W) AS c,
-            MAX(LAT_N) AS b ,
-            MAX(LONG_W) AS d
-        FROM STATION
-      ) AS t
+    SELECT 
+        LAT_N,
+        ROW_NUMBER() OVER (ORDER BY LAT_N) AS rn,
+        COUNT(*) OVER () AS N
+    FROM STATION
+) AS T
+WHERE rn IN (FLOOR((N+1)/2), CEIL((N+1)/2))
