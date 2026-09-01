@@ -1,5 +1,13 @@
 /*
 Enter your query here.
 */
-SELECT ROUND(LONG_W, 4) FROM STATION
-WHERE (SELECT MIN(LAT_N) FROM STATION WHERE LAT_N > 38.7780) = LAT_N
+SELECT 
+ROUND(ABS(c-a) + ABS(d-b), 4)
+
+FROM(SELECT
+        MIN(LAT_N) AS a,
+        MIN(LONG_W) AS b,
+        MAX(LAT_N) AS c,
+        MAX(LONG_W) AS d
+        FROM STATION
+) AS T
