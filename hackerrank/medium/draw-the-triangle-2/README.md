@@ -1,4 +1,4 @@
-# Draw The Triangle 1
+# Draw The Triangle 2
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -30,14 +30,14 @@ Write a query to print the pattern _P(20)_.
 **Language:** SQL  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-23T10:06:19.673Z  
+**Submitted:** 2026-09-23T10:07:21.040Z  
 
 ```sql
 /*
 Enter your query here.
 */
-SET @row := 21;
-SELECT REPEAT('* ', @row := @row - 1) 
+SET @row := 0;
+SELECT REPEAT('* ', @row := @row + 1) 
 FROM information_schema.tables 
 LIMIT 20;
 
