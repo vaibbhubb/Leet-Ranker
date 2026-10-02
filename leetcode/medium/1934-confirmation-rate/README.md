@@ -94,9 +94,9 @@ User 2 made 2 requests where one was confirmed and the other timed out. The conf
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 660 ms (beats 84.83%)  
+**Runtime:** 623 ms (beats 95.67%)  
 **Memory:** 0B (beats 100.00%)  
-**Submitted:** 2026-10-02T04:27:58.715Z  
+**Submitted:** 2026-10-02T10:26:10.990Z  
 
 ```sql
 # Write your MySQL query statement below
